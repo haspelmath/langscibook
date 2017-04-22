@@ -94,6 +94,7 @@
 \newcommand{\lsBiblatexBackend}{bibtex}
 \newcommand{\logotext}{{\color{red}no logo}}
 \newcommand{\lsYear}{\the\year}
+\newcommand{\lsLanguage}{english}
 
 \newcommand{\lsBackBody}{Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca: On refusa continuar payar custosi traductores.}
 \newcommand{\lsBackTitle}{\@title}
@@ -173,6 +174,9 @@
 \DeclareStringOption{biblatexbackend}[bibtex]
 	\define@key{langscibook}{biblatexbackend}{%
 		\renewcommand{\lsBiblatexBackend}{#1}}
+\DeclareStringOption{language}[english]
+	\define@key{langscibook}{language}{%
+		\renewcommand{\lsLanguage}{#1}}
 
 \DeclareStringOption{spinewidth}[20mm]
 	\define@key{langscibook}{spinewidth}{%
@@ -1861,7 +1865,10 @@ width=.8\textwidth
 
 \iflsNoBabel
   \else
-  \usepackage[english]{babel}
+  \usepackage[french,german,english]{babel}
+  \AtBeginDocument{
+    \selectlanguage{\lsLanguage}
+  }
 \fi
 
 \endinput
