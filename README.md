@@ -21,6 +21,7 @@ isbndigital | \<isbn\> | the ISBN of the digital release
 isbnsoftcover | \<isbn\> | the ISBN of the soft cover release
 isbnsoftcoverus | \<isbn\> | the ISBN of the US version of soft cover release (used for distribution to US academic institutions)
 isbnhardcover | \<isbn\> | the ISBN of the hard cover release
+language | english | select the book's language
 modfonts | | use modified fonts
 nonflat | | switch paths when using the langsci folder 
 nonewtxmath | | suppress newtxmath (and use standard, ugly math fonts)
